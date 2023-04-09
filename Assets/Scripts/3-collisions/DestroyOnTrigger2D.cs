@@ -8,6 +8,8 @@ using UnityEngine;
 public class DestroyOnTrigger2D : MonoBehaviour {
     [Tooltip("Every object tagged with this tag will trigger the destruction of this object")]
     [SerializeField] string triggeringTag;
+    [SerializeField]
+    float bottom_filde = -6.66f;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == triggeringTag && enabled) {
@@ -17,6 +19,9 @@ public class DestroyOnTrigger2D : MonoBehaviour {
     }
 
     private void Update() {
-        /* Just to show the enabled checkbox in Editor */
+        if(transform.position.y <= bottom_filde)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
