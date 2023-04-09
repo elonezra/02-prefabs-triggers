@@ -22,7 +22,8 @@ private IEnumerator ShieldTemporarily(DestroyOnTrigger2D destroyComponent) {   /
         destroyComponent.enabled = true;
     }
 ```
-
+* sripts i added you can find in the folder scripts >> task_scripts.
+* one script is the spawn shiled handler, the seconde one is the shiled fade effect.
 
 
 ## Credits
